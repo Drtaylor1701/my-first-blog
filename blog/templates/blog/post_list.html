@@ -9,13 +9,14 @@
         </div>
         
         <div>
-            <h2>Star Trek Picard</h2>
-            <h3>Season 1</h3>
-            <h4>Episode 1: Remembrance</h4>
-        </div>
+            {% for post in posts %}
+            <div>
+                <p>published: {{ post.published_date }}</p>
+                <h2><a href="">{{ post.title }}</a></h2>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+            {% endfor %}
 
-        <div id="spoiler_alert">
-            <p>SPOILER ALERT</p>
         </div>
     </body>
 
